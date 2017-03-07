@@ -15,6 +15,9 @@
 		C7991B071E6D674600ECFD4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7991B051E6D674600ECFD4E /* LaunchScreen.storyboard */; };
 		C7991B121E6D674600ECFD4E /* ChessGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991B111E6D674600ECFD4E /* ChessGameTests.swift */; };
 		C7991B1D1E6D674600ECFD4E /* ChessGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991B1C1E6D674600ECFD4E /* ChessGameUITests.swift */; };
+		C7991B2C1E6D677C00ECFD4E /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991B2B1E6D677C00ECFD4E /* CellView.swift */; };
+		C7991B2E1E6D678F00ECFD4E /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991B2D1E6D678F00ECFD4E /* BoardView.swift */; };
+		C7991B301E6D67AC00ECFD4E /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991B2F1E6D67AC00ECFD4E /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C7991B181E6D674600ECFD4E /* ChessGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChessGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7991B1C1E6D674600ECFD4E /* ChessGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChessGameUITests.swift; sourceTree = "<group>"; };
 		C7991B1E1E6D674600ECFD4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7991B2B1E6D677C00ECFD4E /* CellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		C7991B2D1E6D678F00ECFD4E /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		C7991B2F1E6D67AC00ECFD4E /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +105,10 @@
 		C7991AF81E6D674600ECFD4E /* ChessGame */ = {
 			isa = PBXGroup;
 			children = (
+				C7991B2A1E6D676200ECFD4E /* Model */,
 				C7991AF91E6D674600ECFD4E /* AppDelegate.swift */,
 				C7991AFB1E6D674600ECFD4E /* ViewController.swift */,
+				C7991B2F1E6D67AC00ECFD4E /* GameManager.swift */,
 				C7991AFD1E6D674600ECFD4E /* Main.storyboard */,
 				C7991B031E6D674600ECFD4E /* Assets.xcassets */,
 				C7991B051E6D674600ECFD4E /* LaunchScreen.storyboard */,
@@ -126,6 +134,15 @@
 				C7991B1E1E6D674600ECFD4E /* Info.plist */,
 			);
 			path = ChessGameUITests;
+			sourceTree = "<group>";
+		};
+		C7991B2A1E6D676200ECFD4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7991B2B1E6D677C00ECFD4E /* CellView.swift */,
+				C7991B2D1E6D678F00ECFD4E /* BoardView.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +213,7 @@
 				TargetAttributes = {
 					C7991AF51E6D674600ECFD4E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7MRXJH2RYW;
 						ProvisioningStyle = Automatic;
 					};
 					C7991B0C1E6D674600ECFD4E = {
@@ -262,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7991B2C1E6D677C00ECFD4E /* CellView.swift in Sources */,
+				C7991B301E6D67AC00ECFD4E /* GameManager.swift in Sources */,
 				C7991AFC1E6D674600ECFD4E /* ViewController.swift in Sources */,
+				C7991B2E1E6D678F00ECFD4E /* BoardView.swift in Sources */,
 				C7991B021E6D674600ECFD4E /* ChessGame.xcdatamodeld in Sources */,
 				C7991AFA1E6D674600ECFD4E /* AppDelegate.swift in Sources */,
 			);
@@ -416,7 +437,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7MRXJH2RYW;
 				INFOPLIST_FILE = ChessGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.ttung.ChessGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7MRXJH2RYW;
 				INFOPLIST_FILE = ChessGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.ttung.ChessGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,6 +534,7 @@
 				C7991B231E6D674600ECFD4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7991B241E6D674600ECFD4E /* Build configuration list for PBXNativeTarget "ChessGameTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +543,7 @@
 				C7991B261E6D674600ECFD4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7991B271E6D674600ECFD4E /* Build configuration list for PBXNativeTarget "ChessGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +552,7 @@
 				C7991B291E6D674600ECFD4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
