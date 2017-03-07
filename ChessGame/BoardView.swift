@@ -38,7 +38,7 @@ class BoardView: UIView {
                     whiteBox = false
                 self.cell?.add(board)
                 self.addSubview(board)
-                
+                print("ssss")
                
             }
         }
