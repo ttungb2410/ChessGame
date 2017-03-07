@@ -38,7 +38,6 @@ class BoardView: UIView {
                     whiteBox = false
                 self.cell?.add(board)
                 self.addSubview(board)
-               
             }
         }
     }
@@ -46,10 +45,6 @@ class BoardView: UIView {
 
 class KingChessBoard : BoardView{
   
-    
-    
-   
-    
     override func drawBoard(size: CGFloat) {
         self.widthBoard = size
         self.heightBoard = size

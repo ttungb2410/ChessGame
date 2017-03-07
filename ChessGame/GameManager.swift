@@ -23,7 +23,9 @@ class GameManager: NSObject {
         self.kingChessBoard?.addSubview(boardView)
         viewcontroller.view.addSubview(boardView)
         
-        
+        let piece = Pawn(frame:CGRect(x: 0, y: 64, width: width , height: width), position:(1,2))
+        piece.backgroundColor = UIColor.red
+        viewcontroller.view.addSubview(piece)
     }
 
     

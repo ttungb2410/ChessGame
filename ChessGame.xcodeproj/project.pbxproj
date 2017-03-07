@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C76F7AE01E6E960A0060A6E4 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F7ADF1E6E960A0060A6E4 /* Piece.swift */; };
 		C7991AFA1E6D674600ECFD4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991AF91E6D674600ECFD4E /* AppDelegate.swift */; };
 		C7991AFC1E6D674600ECFD4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7991AFB1E6D674600ECFD4E /* ViewController.swift */; };
 		C7991AFF1E6D674600ECFD4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7991AFD1E6D674600ECFD4E /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C76F7ADF1E6E960A0060A6E4 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		C7991AF61E6D674600ECFD4E /* ChessGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChessGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7991AF91E6D674600ECFD4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7991AFB1E6D674600ECFD4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				C7991B2B1E6D677C00ECFD4E /* CellView.swift */,
 				C7991B2D1E6D678F00ECFD4E /* BoardView.swift */,
+				C76F7ADF1E6E960A0060A6E4 /* Piece.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7991B2C1E6D677C00ECFD4E /* CellView.swift in Sources */,
+				C76F7AE01E6E960A0060A6E4 /* Piece.swift in Sources */,
 				C7991B301E6D67AC00ECFD4E /* GameManager.swift in Sources */,
 				C7991AFC1E6D674600ECFD4E /* ViewController.swift in Sources */,
 				C7991B2E1E6D678F00ECFD4E /* BoardView.swift in Sources */,
