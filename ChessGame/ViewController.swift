@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var gameManager: GameManager?
+    var gameManager: GameManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.gameManager = GameManager()
-        self.gameManager?.drawBoardToViewController(self, width: self.view.bounds.size.width)
+        self.gameManager?.initGame(viewcontroller: self, size: self.view.bounds.size.width)
     }
 
     override func didReceiveMemoryWarning() {

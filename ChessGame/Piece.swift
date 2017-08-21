@@ -7,57 +7,40 @@
 //
 
 import UIKit
+import Foundation
 
-class Piece: UIView {
+class Piece {
     
-    var position:(row: Int, col: Int)!
-    var view: UIView?
     
-    init(frame: CGRect, position: (Int,Int)) {
-        super.init(frame: CGRect(x: 0, y: 64, width: frame.width/8, height: frame.height/8))
-        self.position = position
-        self.setPosition(frame: frame)
+    var pieceColor: PieceColor!
+    var pieceType: PieceType!
+    var placeAt: Position!
+    var cellInfo: CellInfo!
     
+    init(pieceColor: PieceColor, type: PieceType, at position: Position){
+     
+        self.pieceColor = pieceColor
+        self.pieceType = type
+        self.placeAt = position
+    }
+    
+    func iniImage(type: PieceType, pieceColor: PieceColor) -> UIImage{
+        return UIImage(named:  "\(pieceColor.rawValue)\(type.rawValue)")!
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func setPosition(frame: CGRect){
-        
-        self.frame = CGRect(x: CGFloat(self.position.row)*frame.width/8, y: CGFloat(self.position.col)*frame.width/8, width: frame.width/8, height: frame.height/8)
-        self.center = CGPoint(x: frame.width/8*CGFloat(self.position.row), y: frame.width/8*CGFloat(self.position.col))
+   
+    func getCurrentPlace() -> Position{
+        return self.placeAt
     }
     
-    func getPieceLabel(){
-        
+    func setCurrentPlace(place: Position){
+        self.placeAt = place
     }
-  
-}
-
-//class King: Piece{
-//    
-//}
-//
-//class Queen: Piece{
-//    
-//}
-//
-//class Knight: Piece{
-//    
-//}
-//
-//class Bishop: Piece{
-//    
-//}
-//
-//class Rook: Piece{
-//    
-//}
-
-class Pawn: Piece{
-    override func getPieceLabel() {
-        print("pawn")
+    
+    func validMoves(destination: Position) -> Bool{
+        return false
     }
 }

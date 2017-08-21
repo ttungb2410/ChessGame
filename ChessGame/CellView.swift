@@ -7,58 +7,54 @@
 //
 
 import UIKit
+import Foundation
+
+struct Position {
+    var row: Int!
+    var col: Int!
+    
+    
+}
+struct CellInfo {
+    var margin: CGFloat!
+    var squareWidth: CGFloat!
+}
 
 class CellView: UIView {
-
-    var cellSize:CGFloat!
     
-     override init(frame: CGRect){
-        self.cellSize = frame.width/8
+    
+    init(frame: CGRect, color: UIColor){
         super.init(frame: frame)
+        drawCell(cellSize: frame.width, color: color.cgColor)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func drawCellWhite(x: CGFloat, y:CGFloat, width: CGFloat , height: CGFloat){
-        let cell = CAShapeLayer()
+    func drawCell(cellSize: CGFloat, color: CGColor ){
         
-        cell.path = UIBezierPath(roundedRect: CGRect(x: x , y: y , width: cellSize , height: cellSize), cornerRadius: 0).cgPath
-       
-        self.layer.mask = cell
+        let cell = UIView(frame: self.frame)
+        let maskLayer = CAShapeLayer()
+        
+        maskLayer.frame = cell.bounds
+        maskLayer.path = UIBezierPath(rect: cell.bounds).cgPath
+        maskLayer.opacity = 0.7
+        cell.layer.mask = maskLayer
         
         let borderLayer = CAShapeLayer()
-        borderLayer.path = cell.path
-        borderLayer.fillColor = UIColor.gray.cgColor
+        borderLayer.path = maskLayer.path
+        borderLayer.fillColor = color
         borderLayer.strokeColor = UIColor.black.cgColor
-
-        borderLayer.lineWidth = 1
+        borderLayer.lineWidth = 2
+        borderLayer.frame = cell.bounds
         self.layer.addSublayer(borderLayer)
      
    
         
     }
     
-    func drawCellBlack(x: CGFloat, y:CGFloat, width: CGFloat , height: CGFloat){
-        let cell = CAShapeLayer()
-        
-        cell.path = UIBezierPath(roundedRect: CGRect(x: x , y: y , width: cellSize , height: cellSize), cornerRadius: 0).cgPath
-        cell.fillColor = UIColor.black.cgColor
-        cell.opacity = 0.7
-        self.layer.mask = cell
-        
-        let borderLayer = CAShapeLayer()
-        borderLayer.path = cell.path
-        borderLayer.fillColor = UIColor.gray.cgColor
-        borderLayer.strokeColor = UIColor.black.cgColor
-        
-        borderLayer.lineWidth = 1
-        self.layer.addSublayer(borderLayer)
-        
-        
-        
-    }
+   
 
 
 }
